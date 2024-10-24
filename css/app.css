@@ -1,0 +1,148 @@
+* { margin:0; padding:0 ; box-sizing: border-box;}
+a { text-decoration: none;}
+html { scroll-behavior: smooth;  }
+
+/* Header */
+#header { background-color: #fff; text-align: center; padding: 20px 0; }
+#header a { margin: 0 10px; font-size: 1.2em; color: black; }
+#header a:hover { text-decoration: underline; font-weight: 600; color: gray; }
+
+/* Menu */
+#menu { 
+    background-color: black; height:60px; line-height: 60px;text-align: center;
+    position: sticky; top:0; left:0
+}
+#menu li { list-style: none; display: inline-block; margin:auto 10px}
+#menu a { font-size: 1.2em; color: white }
+#menu a:hover { color: gray; text-decoration: underline; } 
+#container {
+    max-width: 80%; /* Giới hạn độ rộng của trang */
+    margin: 0 auto; /* Căn giữa khung chứa */
+    padding: 10px; /* Tạo khoảng cách lùi vào từ rìa */
+}
+/* Sản phẩm mới */
+#spmoi { background-color: white; padding-top:40px }
+#spmoi h2 { text-align: center; text-transform: uppercase; color: black; }
+#spmoi #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between; }
+#spmoi #data .sp { 
+    width: 31%; text-align: center; border: 1px solid #333; 
+    padding: 10px; margin: 10px; font-size: 1.2em;
+    border-radius: 5px; box-shadow: 1px 1px 1px #555;
+    background-color: white; color: black;
+}
+#spmoi #data .sp h3 { margin-bottom:10px; font-size: 1.2em; height: 45px  }
+#spmoi #data .sp p { margin: 10px; }
+#spmoi #data .sp img { width: 80%; height: 250px; margin: auto; border: 1px solid black }
+
+/* Sản phẩm hot */
+#sphot { background-color: #fff; padding-top:40px }
+#sphot h2 { text-align: center; text-transform: uppercase; color: black; }
+#sphot #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between; }
+#sphot #data .sp { 
+    width: 31%; text-align: center; border: 1px solid #333; 
+    padding: 10px; margin: 10px; font-size: 1.2em;
+    border-radius: 5px; box-shadow: 1px 1px 1px #555;
+    background-color: white; color: black;
+}
+#sphot #data .sp h3 { margin-bottom:10px; font-size: 1.0em; height: 45px  }
+#sphot #data .sp p { margin: 10px; }
+#sphot #data .sp img { width: 80%; height: 250px; margin: auto; border: 1px solid black }
+
+/* Bài viết mới */
+#bai_viet_moi { background-color: #fff; padding-top:40px; }
+#bai_viet_moi h2 { text-align: center; text-transform: uppercase; color: black; }
+#bai_viet_moi #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between; }
+#bai_viet_moi #data .bv { 
+    width: 31%; text-align: center; border: 1px solid #333; 
+    padding: 10px; margin: 10px; font-size: 1.2em;
+    border-radius: 5px; box-shadow: 1px 1px 1px #555;
+    background-color: white; color: black;
+}
+#bai_viet_moi #data .bv h3 { margin-bottom:10px; font-size: 1.1em; height: 45px  }
+#bai_viet_moi #data .bv p { margin: 10px; text-align: justify; line-height: 150%; }
+#bai_viet_moi #data .bv img { width: 90%; height: 250px; margin: auto; border: 1px solid black }
+
+/* Bình luận */
+#binh_luan { background-color: #fff; padding-top:40px; }
+#binh_luan h2 { text-align: center; text-transform: uppercase; color: black; }
+#binh_luan #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between; }
+#binh_luan #data .bl { 
+    width: 47%; text-align: center; border: 1px solid #333; 
+    padding: 10px; margin: 10px; font-size: 1.2em;
+    border-radius: 5px; box-shadow: 1px 1px 1px #555;
+    background-color: white; color: black;
+}
+#binh_luan #data .bl h5 { margin-bottom:10px; font-size: 1em; text-align: left; }
+#binh_luan #data .bl h5 span { float:right; }
+#binh_luan #data .bl p { margin: 10px; text-align: justify; line-height: 150%; max-height:200px; overflow:hidden; text-overflow: ellipsis; }
+
+/* Ảnh đẹp */
+#anh_dep { background-color: #f5f5f5; padding-top:40px; }
+#anh_dep h2 { text-align: center; text-transform: uppercase; color: black; }
+#anh_dep #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between; }
+#anh_dep #data .hinh { 
+    width: 31%; text-align: center; border: 1px solid #333; 
+    padding: 10px; margin: 10px; font-size: 1.2em;
+    border-radius: 5px; box-shadow: 1px 1px 1px #555;
+    background-color: white; color: black;
+}
+#anh_dep #data .hinh img { width: 100%; height: 250px; margin: auto; border: 1px solid black }
+
+/* Icon top */
+a.icontop {
+    float:right;
+    width: 35px; height: 35px; line-height: 30px;
+    border-radius: 50%; font-size: 1em;
+    border: 2px solid black; color: black;
+    cursor: pointer; margin-right: 20px;
+}
+a.icontop2 {
+    position: fixed; bottom: 10px; left: 5px;
+    width: 35px; height: 35px; line-height: 35px;
+    border-radius: 50%; font-size: 1.3em;
+    background-color: black;
+    color: white;
+    cursor: pointer; text-align: center;
+}
+
+/* Sản phẩm trong loại */
+#sp_trong_loai { background-color: #fff; padding-top:40px; }
+#sp_trong_loai h2 { text-align: center; text-transform: uppercase; color: black; }
+#sp_trong_loai #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between; }
+#sp_trong_loai #data .sp { 
+    width: 31%; text-align: center; border: 1px solid #333; 
+    padding: 10px; margin: 10px; font-size: 1.2em;
+    border-radius: 5px; box-shadow: 1px 1px 1px #555;
+    background-color: white; color: black;
+}
+#sp_trong_loai #data .sp h3 { margin-bottom:10px; font-size: 1.2em; height: 45px; }
+#sp_trong_loai #data .sp p { margin: 10px; }
+#sp_trong_loai #data .sp img { width: 90%; height: 250px; margin: auto; border: 1px solid black }
+
+/* footer */
+#footer { background-color: #0b0a0a; text-align: center; padding: 20px 0; }
+#footer h1 { margin: 0 10px; font-size: 1.2em; color: white; }
+
+#swiper {
+    margin: 20px auto;
+    max-width: 90%; 
+}
+
+.swiper {
+    width: 100%;
+    height: 600px; 
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ẩn phần hình ảnh vượt ra ngoài khung */
+}
+
+.swiper-slide img {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của slide */
+    height: 100%; /* Chiếm toàn bộ chiều cao của slide */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Cửa hàng giày</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="container">
+    <a href="#top" class="icontop2">&#8657;</a>
+    <header id="header"> 
+        <a href="#spmoi"> Giày mới</a>
+        <a href="#sphot"> Giày nổi bật </a>
+        <a href="#bai_viet_moi"> Bài viết</a>
+        <a href="#binh_luan"> Phản hồi khách hàng</a>
+        <a href="#anh_dep">Ảnh đẹp</a>
+    </header>
+    <nav id="menu"></nav>
+    <div id="swiper">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="/images/slide/1697856865.png" alt=""></div>
+              <div class="swiper-slide"><img src="/images/slide/Blog-cover.png" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </div>
+    <main id="container">
+        
+        <section id="spmoi">
+            <h2>Giày mới <a class="icontop" href="#top">&#8679;</a> </h2>
+            <div id="data"></div> 
+        </section>
+        <section id="sphot">
+            <h2>Giày nổi bật  <a class="icontop" href="#top">&#8679;</a> </h2>
+            <div id="data"></div> 
+        </section>
+        <section id="bai_viet_moi">
+            <h2>Bài viết <a class="icontop" href="#top">&#8679;</a> </h2>
+            <div id="data"></div> 
+        </section>
+        <section id="binh_luan">
+            <h2>Ý kiến khách hàng <a class="icontop" href="#top">&#8679;</a> </h2>
+            <div id="data"></div> 
+        </section>
+        <!-- <section id="anh_dep">
+            <h2>Ảnh đẹp <a class="icontop" href="#top">&#8679;</a> </h2>
+            <div id="data"></div> 
+        </section> -->
+    </main>
+
+    <footer id="footer"><h1>Sinh viên: Phạm Trần Đăng Khoa - PS34956</h1></footer>
+</div>
+</body>
+</html>
+<script type="module">
+import { lay_loai, lay_sp_moi, lay_sp_hot, lay_bai_viet_moi, lay_binh_luan } from './js/app.js';
+import {lay_anh_dep} from './js/app.js';
+
+let loai_html = await lay_loai(); 
+let sp_moi_html = await lay_sp_moi(6); 
+document.querySelector("#menu").innerHTML = loai_html;
+document.querySelector("#spmoi #data").innerHTML = sp_moi_html;
+document.querySelector("#sphot #data").innerHTML = await lay_sp_hot(6);
+document.querySelector("#bai_viet_moi #data").innerHTML = await lay_bai_viet_moi(6);
+document.querySelector("#binh_luan #data").innerHTML = await lay_binh_luan(4);
+// document.querySelector("#anh_dep #data").innerHTML = await lay_anh_dep("giay-dep");
+
+</script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+<script>
+    const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        loop: true, // Để cho ảnh chạy liên tục
+    });
+</script>
+
+
